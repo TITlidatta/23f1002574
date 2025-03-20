@@ -1,0 +1,11 @@
+flask 
+flask_sqlalchemy
+matplotlib
+flask_security 
+yagmail
+redis
+celery[redis]
+numpy
+pandas
+setuptools
+argon2_cffi
