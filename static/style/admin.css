@@ -1,0 +1,30 @@
+body {
+    color: white;
+}
+
+button{
+    border:0px;
+    padding:1px;
+    background-color: #ccccccfb;
+    color:black;
+    border-radius:5px;
+    height:4vh;
+    width:4vw;
+    font-size: small;
+}
+.swal2-custom-button {
+    min-width: 100px; 
+    height: 40px;
+}
+
+a{
+    text-decoration: none;
+    color:black;
+}
+
+.list-group-item {
+    width: 80vw; 
+    border-radius:5px;
+    display: inline-block; 
+    margin-left: 5vw; 
+  }

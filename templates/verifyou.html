@@ -1,0 +1,48 @@
+<html>
+<head>
+    <title>Urbanlife</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/static/style/verify.css">
+    <script>
+        var id = JSON.parse('{( idu | tojson | safe )}');
+    </script>
+</head>
+<body style="background-color:rgb(31, 31, 31)">
+    <br><br>
+    <h4 style="color:white;margin-left:5vw;">YOU NEED TO VERIFY YOURSELF WITH ACCURATE DETAILS TO ACCESS <i> Urbanlife </i></h4>
+    <br>
+    <h5 style="color:white;margin-left:5vw;">Please fill out the details for verification</h5>
+    <br>
+    <br>
+    <div id="sky">
+        <font style="font-family: Arial, Helvetica, sans-serif;color:azure;font-style:oblique"> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp Enter About your self description:&nbsp &nbsp
+        <input v-model="des" >
+        <br>  <br>
+        &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp Enter your work Experience:&nbsp &nbsp
+        <input v-model="exp" style="margin-left:2.7vw;">
+        <br>  <br>
+        &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp Select a service :&nbsp &nbsp
+        <select v-model="Sname" style="margin-left:8.9vw; width:16vw;">
+            <option disabled value="">Select a service name</option>
+            {% for s in SS%}
+            <option value="{( s )}">{( s )}</option>
+            {% endfor %}
+          </select>
+        <br>  <br>
+        &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp Enter your Image link:&nbsp &nbsp
+        <input v-model="imgc" style="margin-left:6.2vw;">
+        <br></font>
+        <button @click="upload()" id="okay">UPLOAD</button>
+    </div>
+    <br>
+    <h5 style="color:white; margin-left:5vw;"> Upload Personal Information documents</h5>
+    <div class="input-group mb-3" style="width:55vw; margin-left:5vw;">
+        <input type="file" class="form-control" id="inputGroupFile02" >
+        <button onclick="send()"  id="okayx">SEND</button>
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.7.16/dist/vue.js"></script>
+    <script type="text/javascript" src="/static/scripts/verify.js"></script>
+</body>
+</html>
